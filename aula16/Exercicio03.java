@@ -26,7 +26,6 @@ public class Exercicio03 {
 
             if (nome.length() > 3) {
                 infoValidas = true;
-                System.out.println("Nome válido");
             } else {
                 System.out.println("Nome inválido, mínimo de 3 caracteres!");
             }
@@ -39,9 +38,8 @@ public class Exercicio03 {
 
             if (idade > 0 && idade < 150) {
                 infoValidas = true;
-                System.out.println("Idade válida");
             } else {
-                System.out.println("Idade inválida");
+                System.out.println("Idade inválida, digite novamente");
             }
         } while (!infoValidas);
 
@@ -52,7 +50,6 @@ public class Exercicio03 {
 
             if (salario > 0) {
                 infoValidas = true;
-                System.out.println("Salário válido");
             } else {
                 System.out.println("Salário Inválido, digite salario acima de zero");
             }
@@ -65,10 +62,10 @@ public class Exercicio03 {
 
             if (sexo.equalsIgnoreCase("M")) {
                 infoValidas = true;
-                System.out.println("Sexo Masculino");
+                sexo = "Masculino";
             } else if (sexo.equalsIgnoreCase("F")) {
                 infoValidas = true;
-                System.out.println("Sexo Feminino");
+                sexo = "Feminino";
             } else {
                 System.out.println("Sexo inválido, digite M ou F");
             }
@@ -83,32 +80,32 @@ public class Exercicio03 {
                 case "C":
                 case "c":
                     infoValidas = true;
-                    System.out.println("Estado civil: Casado");
+                    estadoCivil = "Casado";
                     break;
                 case "S":
                 case "s":
                     infoValidas = true;
-                    System.out.println("Estado civil: Solteiro");
+                    estadoCivil = "Solteiro";
                     break;
                 case "V":
                 case "v":
                     infoValidas = true;
-                    System.out.println("Estado civil: Viúvo");
+                    estadoCivil = "Viúvo";
                     break;
                 case "D":
                 case "d":
                     infoValidas = true;
-                    System.out.println("Estado civil: Divorciado");
+                    estadoCivil = "Divorciado";
                     break;
                 default:
-                    System.out.println("Estado civil inválido");
+                    System.out.println("Estado civil inválido, digite novamente");
             }
         } while (!infoValidas);
 
         System.out.println("\n=========================");
         System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Salário: " + salario);
+        System.out.println("Idade: " + idade + " anos");
+        System.out.println("Salário: R$" + salario);
         System.out.println("Sexo: " + sexo);
         System.out.println("Estado civil: " + estadoCivil);
         System.out.println("=========================");
