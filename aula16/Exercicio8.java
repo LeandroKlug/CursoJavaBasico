@@ -21,11 +21,10 @@ public class Exercicio8 {
             System.out.println("Insira um valor:");
             numero = scan.nextInt();
             soma += numero;
-
         }
+        
         media = soma / 5;
         System.out.println("Soma de todos os numeros é " + soma);
         System.out.printf("Média dos numeros é %.2f ", media);
-    }
-    
+    }    
 }
